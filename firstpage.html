@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.oaistatic.com/_next/static/media/favicon-16x16.9b8dbb69.png"
+      type="image/x-icon"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../index.css" />
+    <title>ChatGPT</title>
+  </head>
+  <body>
+    <div class="w-full flex flex-row h-screen">
+      <!-- Left Side -->
+      <div class="w-80 h-screen relative bg-[#202123] text-white">
+        <div class="flex justify-around pt-2 mb-5">
+          <div
+            class="border relative border-gray-500 pl-12 pr-16 py-2.5 text-sm cursor-pointer rounded"
+          >
+            <h3>New Chat</h3>
+            <div class="absolute left-5 top-3">
+              <svg
+                stroke="currentColor"
+                fill="none"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon-sm shrink-0"
+                height="1.2em"
+                width="1.2em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </div>
+          </div>
+          <div
+            class="border border-gray-500 px-3.5 flex cursor-pointer items-center justify-center text-sm rounded"
+          >
+            <svg
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon-sm"
+              height="1.2em"
+              width="1.2em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="9" y1="3" x2="9" y2="21"></line>
+            </svg>
+          </div>
+        </div>
+        <!-- Chats -->
+        <div class="px-3">
+          <h4 class="text-gray-400 pl-3 text-xs mb-2">Yesterday</h4>
+          <div
+            class="flex items-center p-3 hover:bg-[#54555f] cursor-pointer rounded text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+              />
+            </svg>
+            <h6 class="pl-3">Group Summary Query</h6>
+          </div>
+          <div
+            class="flex items-center p-3 hover:bg-[#54555f] cursor-pointer rounded text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+              />
+            </svg>
+            <h6 class="pl-3">Inserting Quiz Answers</h6>
+          </div>
+        </div>
+        <div class="pl-3 pr-2 mt-5">
+          <h4 class="text-gray-400 mb-2 pl-2 text-xs">Previous 7 Days</h4>
+          <div
+            class="flex items-center p-3 rounded hover:bg-[#54555f] cursor-pointer text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+              />
+            </svg>
+            <h6 class="pl-3">MySQL Calculation Assistance</h6>
+          </div>
+          <div
+            class="flex items-center p-3 rounded hover:bg-[#54555f] cursor-pointer text-sm"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+              />
+            </svg>
+            <h6 class="pl-3">Calculation Help in React</h6>
+          </div>
+        </div>
+        <!-- Left Bottom Design -->
+        <div class="absolute bottom-4 w-full">
+          <div class="px-4 text-gray-300">
+            <hr />
+          </div>
+          <div
+            class="flex items-center cursor-pointer hover:bg-[#54555f] rounded py-3 mx-2 mt-3 pl-3"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M13 18v-8l3.5 3.5l1.42-1.42L12 6.16l-5.92 5.92L7.5 13.5L11 10v8h2M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2Z"
+              />
+            </svg>
+            <h4 class="text-sm pl-3">Upgrade to Plus</h4>
+          </div>
+          <a
+            href="./login.html"
+            class="flex items-center cursor-pointer hover:bg-[#54555f] rounded py-3 mx-2 pl-3"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#ffffff"
+                d="M5 21q-.825 0-1.413-.588T3 19V5q0-.825.588-1.413T5 3h7v2H5v14h7v2H5Zm11-4l-1.375-1.45l2.55-2.55H9v-2h8.175l-2.55-2.55L16 7l5 5l-5 5Z"
+              />
+            </svg>
+            <h4 class="text-sm pl-3">Log Out</h4>
+          </a>
+          <div
+            class="flex items-center cursor-pointer hover:bg-[#54555f] justify-between py-3 mx-2 rounded pl-4 pr-4"
+          >
+            <div class="flex items-center">
+              <img
+                src="https://lh3.googleusercontent.com/a/ACg8ocKMDRLj4u3HLzQy2TEREyRk3BCI6mAF4mXTfzBWon2g4hY=s96-c"
+                alt="UserImage"
+                class="w-8 h-8"
+              />
+              <h4 class="pl-2 font-semibold">Kishor S</h4>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              viewBox="0 0 20 20"
+            >
+              <path
+                fill="currentColor"
+                d="M14 10.25a1.25 1.25 0 1 1 2.5 0a1.25 1.25 0 0 1-2.5 0Zm-5 0a1.25 1.25 0 1 1 2.5 0a1.25 1.25 0 0 1-2.5 0Zm-5 0a1.249 1.249 0 1 1 2.5 0a1.25 1.25 0 1 1-2.5 0Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- Right Side -->
+      <div class="bg-[#343541] w-full h-screen relative">
+        <div class="px-44 flex flex-col h-full justify-between">
+          <div class="flex bg-[#202123] rounded-2xl w-fit p-1 mt-5 mx-auto">
+            <div class="flex items-center bg-[#40414F] rounded-xl px-10 py-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="none"
+                class="icon-sm transition-colors text-green-600 mr-2"
+                width="16"
+                height="16"
+              >
+                <path
+                  d="M9.586 1.526A.6.6 0 0 0 8.553 1l-6.8 7.6a.6.6 0 0 0 .447 1h5.258l-1.044 4.874A.6.6 0 0 0 7.447 15l6.8-7.6a.6.6 0 0 0-.447-1H8.542l1.044-4.874Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <h4 class="text-[#D0D0D6] font-bold text-sm">GPT-3.5</h4>
+            </div>
+            <div class="flex items-center space-x-3 pl-5 px-8">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="none"
+                class="icon-sm transition-colors text-gray-500 group-hover/button:text-brand-purple"
+                width="16"
+                height="16"
+              >
+                <path
+                  d="M12.784 1.442a.8.8 0 0 0-1.569 0l-.191.953a.8.8 0 0 1-.628.628l-.953.19a.8.8 0 0 0 0 1.57l.953.19a.8.8 0 0 1 .628.629l.19.953a.8.8 0 0 0 1.57 0l.19-.953a.8.8 0 0 1 .629-.628l.953-.19a.8.8 0 0 0 0-1.57l-.953-.19a.8.8 0 0 1-.628-.629l-.19-.953h-.002ZM5.559 4.546a.8.8 0 0 0-1.519 0l-.546 1.64a.8.8 0 0 1-.507.507l-1.64.546a.8.8 0 0 0 0 1.519l1.64.547a.8.8 0 0 1 .507.505l.546 1.641a.8.8 0 0 0 1.519 0l.546-1.64a.8.8 0 0 1 .506-.507l1.641-.546a.8.8 0 0 0 0-1.519l-1.64-.546a.8.8 0 0 1-.507-.506L5.56 4.546Zm5.6 6.4a.8.8 0 0 0-1.519 0l-.147.44a.8.8 0 0 1-.505.507l-.441.146a.8.8 0 0 0 0 1.519l.44.146a.8.8 0 0 1 .507.506l.146.441a.8.8 0 0 0 1.519 0l.147-.44a.8.8 0 0 1 .506-.507l.44-.146a.8.8 0 0 0 0-1.519l-.44-.147a.8.8 0 0 1-.507-.505l-.146-.441Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <h4 class="text-gray-500 font-bold">GPT-4</h4>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                class="icon-sm fill-current w-4 h4 transition-colors sm:ml-0 group-hover/options:text-gray-500 !text-gray-500 -ml-2 group-hover/button:text-brand-purple"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <div class="w-fit mx-auto">
+            <h1 class="text-[#565869] font-bold text-4xl">ChatGPT</h1>
+          </div>
+          <!-- Right Bottom -->
+          <div>
+            <!-- Suggestion Promt -->
+            <div class="grid grid-cols-2 gap-4 px-2">
+              <div
+                class="border hover:bg-[#54555f] border-gray-500 rounded-xl text-sm text-gray-300 px-2 py-1.5"
+              >
+                <h4 class="font-bold">Show me a code snippet</h4>
+                <span class="text-gray-400">of a website's sticky header</span>
+              </div>
+              <div
+                class="border hover:bg-[#54555f] border-gray-500 rounded-xl text-sm text-gray-300 px-2 py-1.5"
+              >
+                <h4 class="font-bold">Give me ideas</h4>
+                <span class="text-gray-400"
+                  >for what to do with my kid's art</span
+                >
+              </div>
+              <div
+                class="border hover:bg-[#54555f] border-gray-500 rounded-xl text-sm text-gray-300 px-2 py-1.5"
+              >
+                <h4 class="font-bold">Create a personal webpage for me</h4>
+                <span class="text-gray-400"
+                  >after asking me three questions</span
+                >
+              </div>
+              <div
+                class="border hover:bg-[#54555f] border-gray-500 rounded-xl text-sm text-gray-300 px-2 py-1.5"
+              >
+                <h4 class="font-bold">Come up with concepts</h4>
+                <span class="text-gray-400">for a retro-style arcade game</span>
+              </div>
+            </div>
+            <!-- Search Bar -->
+            <div class="mt-4">
+              <div class="relative">
+                <input
+                  type="text"
+                  class="outline-none py-4 rounded-lg bg-[#40414F] text-white shadow-xl pl-4 w-full"
+                  placeholder="Send a message"
+                />
+                <div class="absolute right-5 top-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                    viewBox="0 0 512 512"
+                    class="fill-current text-gray-500"
+                  >
+                    <path
+                      d="M48 448l416-192L48 64v149.333L346 256 48 298.667z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-[#B3B4C0] px-5 text-sm font-semibold mx-auto w-fit m-1.5"
+            >
+              <small
+                >Free Research Preview. ChatGPT may products inaccurate
+                information about people, places, or facts.
+                <a
+                  href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+                  target="_blank"
+                  class="underline"
+                >
+                  ChatGPT September 25 Version</a
+                ></small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-3 right-3 rounded-full bg-[#4A4B53] p-1.5">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            class="fill-current text-[#b2b3bb] cursor-pointer"
+          >
+            <path
+              fill="currentColor"
+              d="M14.6 8.075q0-1.075-.712-1.725T12 5.7q-.725 0-1.313.313t-1.012.912q-.4.575-1.088.663T7.4 7.225q-.35-.325-.388-.8t.238-.9q.8-1.2 2.038-1.863T12 3q2.425 0 3.938 1.375t1.512 3.6q0 1.125-.475 2.025t-1.75 2.125q-.925.875-1.25 1.363T13.55 14.6q-.1.6-.513 1t-.987.4q-.575 0-.988-.388t-.412-.962q0-.975.425-1.788T12.5 11.15q1.275-1.125 1.688-1.738t.412-1.337ZM12 22q-.825 0-1.413-.588T10 20q0-.825.588-1.413T12 18q.825 0 1.413.588T14 20q0 .825-.588 1.413T12 22Z"
+            />
+          </svg>
+        </div>
+        <div class="absolute bottom-12 right-3 rounded-full">
+          <a href="https://github.com/kishor-selvam/ChatGPT-UI" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 64 64"
+              class="fill-current text-white hover:text-black cursor-pointer"
+            >
+              <path
+                d="M32 0C14 0 0 14 0 32c0 21 19 30 22 30c2 0 2-1 2-2v-5c-7 2-10-2-11-5c0 0 0-1-2-3c-1-1-5-3-1-3c3 0 5 4 5 4c3 4 7 3 9 2c0-2 2-4 2-4c-8-1-14-4-14-15c0-4 1-7 3-9c0 0-2-4 0-9c0 0 5 0 9 4c3-2 13-2 16 0c4-4 9-4 9-4c2 7 0 9 0 9c2 2 3 5 3 9c0 11-7 14-14 15c1 1 2 3 2 6v8c0 1 0 2 2 2c3 0 22-9 22-30C64 14 50 0 32 0Z"
+              /></svg
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
